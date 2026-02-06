@@ -5,7 +5,7 @@ Precise risk stratification for biochemical recurrence (BCR) in prostate cancer 
 
 </div>
 
-![](https://github.com/anxuan-han/DvHGNN/blob/main/workflow.png)
+![](https://github.com/anxuanhan/DvHGNN/blob/main/workflow.png)
 
 
 All experiments were conducted on an NVIDIA A100 (40 GB) GPU with CUDA 11.6.
