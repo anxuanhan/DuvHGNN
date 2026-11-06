@@ -139,7 +139,7 @@ After execution, each `.h5` file is updated with the following additional datase
 This step constructs a spatial hypergraph by connecting neighboring patches based on spatial proximity. Local spatial neighborhoods are modeled using k-nearest neighbors, capturing tissue architecture and local context.
 
 ```
-python Preprocessing/knn.py --feature_dir /scratchdata1/users/a1978372/Anxuan/test_framwork/Features --n_neighbors 8
+python Preprocessing/knn.py --feature_dir Features --n_neighbors 8
 ```
 
 After execution, each `.h5` file is updated with the following additional dataset:
@@ -188,7 +188,7 @@ Model performance is evaluated using standard survival and classification metric
 Receiver operating characteristic (ROC) curves and area under the curve (AUC) are computed to assess discrimination performance.
 
 ```bash
-python Model_evaluation/ROC_curve.py --dataset_type validation --h5_dir Features --csv_path data/recurrence_information.csv --hgnn_model_path Model_training/results/best_model.pth --output_dir Model_evaluation/results --device cuda --dropout 0.6 --seed 42 --train_ratio 0.6
+python Model_evaluation/ROC_curve.py --dataset_type validation --h5_dir Features --csv_path data/recurrence_information.csv --hgnn_model_path Model_training/results/best_model.pth --output_dir Model_evaluation/results --device cuda --dropout 0.6 --seed 42 --train_ratio 0.8
 ```
 The ROC curves and AUC results are saved under `Model_evaluation/results/validation/`.
 
